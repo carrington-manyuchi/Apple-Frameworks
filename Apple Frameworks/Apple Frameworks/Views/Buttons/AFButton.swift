@@ -12,7 +12,7 @@ struct AFButton: View {
     var title: String
     
     var body: some View {
-        Text(title)
+        Label(title, systemImage: "book.fill")
         .foregroundStyle(.white)
         .font(.title2)
         .fontWeight(.semibold)
