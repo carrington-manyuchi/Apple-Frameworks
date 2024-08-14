@@ -26,7 +26,11 @@ struct FrameworkGridView: View {
                             }
                     })
                 })
-                .navigationTitle("Frameworks")
+                .navigationTitle("🍎 Frameworks")
+                .fullScreenCover(isPresented: $viewModel.isShowingDetailsView, content: {
+                    FrameworkDetailsView(framework: viewModel.selectedFramework!,
+                                         isShowingDetailsView: $viewModel.isShowingDetailsView)
+                })
             }
         }
     }
